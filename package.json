@@ -1,7 +1,7 @@
 {
   "name": "memop",
   "version": "1.1.0",
-  "description": "Visualizing and monitor your performance.",
+  "description": "Memory data operations.",
   "main": "dist/memop",
   "scripts": {
     "build:dev": "rollup -c ./script/rollup.config.js",
