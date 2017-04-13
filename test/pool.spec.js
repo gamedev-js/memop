@@ -1,7 +1,7 @@
 const tap = require('tap');
 const { Pool } = require('../dist/memop');
 
-tap.test('pool', t => {
+tap.test('Pool', t => {
   t.test('alloc', t => {
     let pool = new Pool(function () {
       return { x: 0, y: 0, z: 0 };

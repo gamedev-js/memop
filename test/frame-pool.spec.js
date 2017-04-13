@@ -1,7 +1,7 @@
 const tap = require('tap');
 const { FramePool } = require('../dist/memop');
 
-tap.test('pool', t => {
+tap.test('FramePool', t => {
   t.test('alloc', t => {
     let pool = new FramePool(function () {
       return new Float32Array(16);
