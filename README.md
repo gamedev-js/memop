@@ -47,6 +47,21 @@ function render() {
 render();
 ```
 
+**FixedArray**
+
+```javascript
+let array = new FixedArray(100);
+
+array.push(0);
+array.push(1);
+array.push(3);
+array.push(4);
+
+// do stuff...
+
+array.fastRemove(2);
+```
+
 ## License
 
 MIT © 2017 Johnny Wu
