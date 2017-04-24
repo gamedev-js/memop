@@ -1,6 +1,6 @@
 
 /*
- * memop v1.1.0
+ * memop v1.1.1
  * (c) 2017 @Johnny Wu
  * Released under the MIT License.
  */
@@ -53,7 +53,11 @@ class FixedArray {
     if (this._count < 0) {
       this._count = 0;
     }
+
+    let ret = this._data[this._count];
     this._data[this._count] = undefined;
+
+    return ret;
   }
 
   fastRemove(idx) {
