@@ -47,6 +47,31 @@ function render() {
 render();
 ```
 
+**RecyclePool**
+
+```javascript
+let pool = new RecyclePool(function () {
+  return {
+    age: 0,
+    velocity: [1,1,1]
+  };
+}, 256);
+
+pool.add();
+pool.add();
+
+for (let i = 0; i < pool.length; ++i) {
+  let p = pool.data[i];
+
+  // do stuff...
+
+  if (p.age > 10) {
+    pool.remove(i);
+    --i;
+  }
+}
+```
+
 **FixedArray**
 
 ```javascript
