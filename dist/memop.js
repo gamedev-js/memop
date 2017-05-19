@@ -1,6 +1,6 @@
 
 /*
- * memop v1.3.0
+ * memop v1.3.1
  * (c) 2017 @Johnny Wu
  * Released under the MIT License.
  */
@@ -325,6 +325,13 @@ var typedArrayPool = {
 
   free(array) {
     _free(array.buffer);
+  },
+
+  reset() {
+    let _bufferPools = Array(8);
+    for (let i = 0; i < 8; ++i) {
+      _bufferPools[i] = [];
+    }
   },
 };
 
