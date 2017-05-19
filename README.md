@@ -87,6 +87,18 @@ array.push(4);
 array.fastRemove(2);
 ```
 
+**TypedArrayPool**
+
+```javascript
+let array1 = TypedArrayPool.alloc_float32(100);
+let array2 = TypedArrayPool.alloc_int16(32);
+
+// do stuff...
+
+TypedArrayPool.free(array1);
+TypedArrayPool.free(array2);
+```
+
 ## License
 
 MIT © 2017 Johnny Wu
