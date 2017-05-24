@@ -88,5 +88,20 @@ tap.test('FixedArray', t => {
     t.end();
   });
 
+  t.test('indexOf', t => {
+    let arr = new FixedArray(100);
+
+    arr.push(100);
+    arr.push(200);
+    arr.push(300);
+    arr.push(400);
+    arr.push(500);
+
+    t.equal(arr.indexOf(300), 2);
+    t.equal(arr.indexOf(400), 3);
+
+    t.end();
+  });
+
   t.end();
 });
