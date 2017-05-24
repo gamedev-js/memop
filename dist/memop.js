@@ -1,6 +1,6 @@
 
 /*
- * memop v1.3.1
+ * memop v1.3.2
  * (c) 2017 @Johnny Wu
  * Released under the MIT License.
  */
@@ -70,6 +70,15 @@ class FixedArray {
     this._data[idx] = this._data[last];
     this._data[last] = undefined;
     this._count -= 1;
+  }
+
+  indexOf(val) {
+    let idx = this._data.indexOf(val);
+    if (idx >= this._count) {
+      return -1;
+    }
+
+    return idx;
   }
 }
 
