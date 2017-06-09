@@ -5,7 +5,7 @@
   "main": "dist/memop",
   "scripts": {
     "build:dev": "rollup -c ./script/rollup.config.js",
-    "build:min": "uglifyjs ./dist/memop.dev.js --mangle --source-map ./dist/memop.min.js.map -o ./dist/memop.min.js",
+    "build:min": "uglifyjs ./dist/memop.dev.js --mangle --source-map url=memop.min.js.map -o ./dist/memop.min.js",
     "release": "npm run build:dev && npm run build:min",
     "start": "electron",
     "server": "preview -p 8002 -e examples",
@@ -29,11 +29,11 @@
   "homepage": "https://github.com/gamedev-js/memop/issues",
   "dependencies": {},
   "devDependencies": {
-    "electron": "^1.6.6",
+    "electron": "^1.7.3",
     "fs-jetpack": "^0.13.0",
     "rollup": "^0.41.4",
     "rollup-watch": "^3.2.2",
     "tap": "^10.3.2",
-    "uglify-js": "git+https://github.com/mishoo/UglifyJS2.git#harmony"
+    "uglify-es": "^3.0.15"
   }
 }
