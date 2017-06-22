@@ -85,5 +85,33 @@ tap.test('RecyclePool', t => {
     t.end();
   });
 
+  t.test('sort', t => {
+    let arr = new RecyclePool(function () {
+      return {
+        id: -1,
+        age: 0,
+        velocity: [1, 1, 1],
+      };
+    }, 100);
+
+    arr.add().id = 10;
+    arr.add().id = 20;
+    arr.add().id = 30;
+    arr.add().id = 40;
+    arr.add().id = 50;
+
+    arr.sort((a, b) => {
+      return b.id - a.id;
+    });
+
+    t.equal(arr.data[0].id, 50);
+    t.equal(arr.data[1].id, 40);
+    t.equal(arr.data[2].id, 30);
+    t.equal(arr.data[3].id, 20);
+    t.equal(arr.data[4].id, 10);
+
+    t.end();
+  });
+
   t.end();
 });

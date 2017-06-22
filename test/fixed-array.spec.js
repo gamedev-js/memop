@@ -103,5 +103,21 @@ tap.test('FixedArray', t => {
     t.end();
   });
 
+  t.test('sort', t => {
+    let arr = new FixedArray(100);
+
+    arr.push(840);
+    arr.push(343);
+    arr.push(457);
+    arr.push(231);
+    arr.push(759);
+
+    arr.sort();
+    t.equal(arr.indexOf(231), 0);
+    t.equal(arr.indexOf(840), 4);
+
+    t.end();
+  });
+
   t.end();
 });
