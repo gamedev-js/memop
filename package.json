@@ -1,6 +1,6 @@
 {
   "name": "memop",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "Memory data operations.",
   "main": "dist/memop",
   "scripts": {
