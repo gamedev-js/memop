@@ -1,6 +1,6 @@
 
 /*
- * memop v1.4.0
+ * memop v1.4.1
  * (c) 2017 @Johnny Wu
  * Released under the MIT License.
  */
@@ -249,6 +249,14 @@ class FramePool {
 
   reset() {
     this._count = 0;
+  }
+
+  get length() {
+    return this._count;
+  }
+
+  get data() {
+    return this._data;
   }
 }
 
