@@ -1,6 +1,6 @@
 
 /*
- * memop v1.4.1
+ * memop v1.4.2
  * (c) 2017 @Johnny Wu
  * Released under the MIT License.
  */
