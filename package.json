@@ -1,8 +1,9 @@
 {
   "name": "memop",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "Memory data operations.",
   "main": "dist/memop",
+  "jsnext:main": "index.js",
   "scripts": {
     "build:dev": "rollup -c ./script/rollup.config.js",
     "build:min": "uglifyjs ./dist/memop.dev.js --mangle --source-map url=memop.min.js.map -o ./dist/memop.min.js",
