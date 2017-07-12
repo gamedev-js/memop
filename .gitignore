@@ -26,6 +26,7 @@ profile
 *.log
 
 # project files
-node_modules/
-bower_components/
-examples/assets_01/
+node_modules
+bower_components
+examples/assets_01
+dist
