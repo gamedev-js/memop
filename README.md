@@ -26,27 +26,6 @@ pool.free(a);
 pool.free(b);
 ```
 
-**FramePool**
-
-```javascript
-let pool = new FramePool(function () {
-  return new Float32Array(16);
-}, 256);
-
-function render() {
-  pool.reset();
-
-  let a = pool.alloc();
-  let b = pool.alloc();
-
-  // do stuff...
-
-  requestAnimationFrame(render);
-}
-
-render();
-```
-
 **RecyclePool**
 
 ```javascript
