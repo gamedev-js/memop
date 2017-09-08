@@ -1,6 +1,6 @@
 {
   "name": "memop",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "description": "Memory data operations.",
   "main": "dist/memop",
   "module": "index.js",
