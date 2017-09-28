@@ -78,6 +78,25 @@ TypedArrayPool.free(array1);
 TypedArrayPool.free(array2);
 ```
 
+**LinkedArray**
+
+```javascript
+let arr = new LinkedArray(100, () => {
+  return {
+    name: '',
+    next: null,
+    prev: null,
+  };
+});
+
+let node = arr.add();
+node.name = 'foobar';
+
+arr.forEach(item => {
+  // do stuff...
+});
+```
+
 ## License
 
 MIT © 2017 Johnny Wu
