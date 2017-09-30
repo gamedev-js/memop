@@ -6,8 +6,8 @@ tap.test('LinkedArray', t => {
     let arr = new LinkedArray(100, () => {
       return {
         name: '',
-        next: null,
-        prev: null,
+        _next: null,
+        _prev: null,
       };
     });
 
@@ -31,8 +31,8 @@ tap.test('LinkedArray', t => {
     let arr = new LinkedArray(100, () => {
       return {
         name: '',
-        next: null,
-        prev: null,
+        _next: null,
+        _prev: null,
       };
     });
 
@@ -58,8 +58,8 @@ tap.test('LinkedArray', t => {
     let arr = new LinkedArray(100, () => {
       return {
         name: '',
-        next: null,
-        prev: null,
+        _next: null,
+        _prev: null,
       };
     });
 
@@ -85,8 +85,8 @@ tap.test('LinkedArray', t => {
     let arr = new LinkedArray(100, () => {
       return {
         name: '',
-        next: null,
-        prev: null,
+        _next: null,
+        _prev: null,
       };
     });
 
@@ -112,8 +112,8 @@ tap.test('LinkedArray', t => {
     let arr = new LinkedArray(100, () => {
       return {
         name: '',
-        next: null,
-        prev: null,
+        _next: null,
+        _prev: null,
       };
     });
 

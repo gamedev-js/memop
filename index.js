@@ -1,3 +1,4 @@
+export { default as CircularPool } from './lib/circular-pool';
 export { default as FixedArray } from './lib/fixed-array';
 export { default as LinkedArray } from './lib/linked-array';
 export { default as Pool } from './lib/pool';
