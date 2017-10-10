@@ -139,5 +139,32 @@ tap.test('LinkedArray', t => {
     t.end();
   });
 
+  t.test('remove item during forEach', t => {
+    let arr = new LinkedArray(100, () => {
+      return {
+        name: '',
+        _next: null,
+        _prev: null,
+      };
+    });
+
+    for (let i = 0; i < 100; ++i) {
+      let node = arr.add();
+      node.name = 'foo ' + i;
+    }
+
+    let tick = 0;
+    arr.forEach(item => {
+      if (item.name === 'foo 20') {
+        arr.remove(item);
+      }
+      ++tick;
+    });
+
+    t.equal(tick, 100);
+
+    t.end();
+  });
+
   t.end();
 });
