@@ -94,6 +94,11 @@ tap.test('RecyclePool', t => {
       };
     }, 100);
 
+    // sort here to make sure it can sort emtpty array
+    arr.sort((a, b) => {
+      return b.id - a.id;
+    });
+
     arr.add().id = 10;
     arr.add().id = 20;
     arr.add().id = 30;

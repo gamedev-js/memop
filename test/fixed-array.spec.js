@@ -106,6 +106,9 @@ tap.test('FixedArray', t => {
   t.test('sort', t => {
     let arr = new FixedArray(100);
 
+    // sort here to make sure it can sort emtpty array
+    arr.sort();
+
     arr.push(840);
     arr.push(343);
     arr.push(457);
@@ -115,6 +118,30 @@ tap.test('FixedArray', t => {
     arr.sort();
     t.equal(arr.indexOf(231), 0);
     t.equal(arr.indexOf(840), 4);
+
+    t.end();
+  });
+
+  t.test('sort with function', t => {
+    let arr = new FixedArray(100);
+
+    // sort here to make sure it can sort emtpty array
+    arr.sort((a, b) => {
+      return a.id - b.id;
+    });
+
+    arr.push({ id: 840 });
+    arr.push({ id: 343 });
+    arr.push({ id: 457 });
+    arr.push({ id: 231 });
+    arr.push({ id: 759 });
+
+    arr.sort((a, b) => {
+      return a.id - b.id;
+    });
+
+    t.equal(arr.data[0].id, 231);
+    t.equal(arr.data[4].id, 840);
 
     t.end();
   });
