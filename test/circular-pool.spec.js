@@ -3,11 +3,11 @@ const { CircularPool } = require('../dist/memop');
 
 tap.test('LinkedArray', t => {
   t.test('request', t => {
-    let arr = new CircularPool(3, () => {
+    let arr = new CircularPool(() => {
       return {
         name: ''
       };
-    });
+    }, 3);
 
     let item = arr.request();
     item.name = 'foo 001';

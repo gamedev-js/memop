@@ -3,13 +3,13 @@ const { LinkedArray } = require('../dist/memop');
 
 tap.test('LinkedArray', t => {
   t.test('add', t => {
-    let arr = new LinkedArray(100, () => {
+    let arr = new LinkedArray(() => {
       return {
         name: '',
         _next: null,
         _prev: null,
       };
-    });
+    }, 100);
 
     let node = arr.add();
     node.name = 'foo 001';
@@ -28,13 +28,13 @@ tap.test('LinkedArray', t => {
   });
 
   t.test('remove head', t => {
-    let arr = new LinkedArray(100, () => {
+    let arr = new LinkedArray(() => {
       return {
         name: '',
         _next: null,
         _prev: null,
       };
-    });
+    }, 100);
 
     let node = arr.add();
     node.name = 'foo 001';
@@ -55,13 +55,13 @@ tap.test('LinkedArray', t => {
   });
 
   t.test('remove tail', t => {
-    let arr = new LinkedArray(100, () => {
+    let arr = new LinkedArray(() => {
       return {
         name: '',
         _next: null,
         _prev: null,
       };
-    });
+    }, 100);
 
     let node = arr.add();
     node.name = 'foo 001';
@@ -82,13 +82,13 @@ tap.test('LinkedArray', t => {
   });
 
   t.test('remove', t => {
-    let arr = new LinkedArray(100, () => {
+    let arr = new LinkedArray(() => {
       return {
         name: '',
         _next: null,
         _prev: null,
       };
-    });
+    }, 100);
 
     let node = arr.add();
     node.name = 'foo 001';
@@ -109,13 +109,13 @@ tap.test('LinkedArray', t => {
   });
 
   t.test('forEach', t => {
-    let arr = new LinkedArray(100, () => {
+    let arr = new LinkedArray(() => {
       return {
         name: '',
         _next: null,
         _prev: null,
       };
-    });
+    }, 100);
 
     let node = arr.add();
     node.name = 'foo 001';
@@ -140,13 +140,13 @@ tap.test('LinkedArray', t => {
   });
 
   t.test('remove item during forEach', t => {
-    let arr = new LinkedArray(100, () => {
+    let arr = new LinkedArray(() => {
       return {
         name: '',
         _next: null,
         _prev: null,
       };
-    });
+    }, 100);
 
     for (let i = 0; i < 100; ++i) {
       let node = arr.add();
